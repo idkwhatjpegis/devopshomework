@@ -10,7 +10,8 @@ pipeline{
             remote.user = 'jenkins'
             remote.password = 'admin'
             remote.allowAnyHosts = true
-          sshCommand remote: remote, command: "docker compose up"
+          sshCommand remote: remote, command: "cd devopshomework"
+          sshCommand remote: remote, command: "sudo docker compose up"
                 }
             }
         }
