@@ -1,5 +1,6 @@
 pipeline {
   agent any
+  stages {
   stage('SSH into the server') {
     steps {
             def remote = [:]
@@ -44,3 +45,4 @@ pipeline {
       }
     }
   }
+}  
