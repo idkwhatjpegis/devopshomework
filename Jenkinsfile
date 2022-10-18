@@ -1,12 +1,16 @@
 pipeline {
   agent any
-  def remote = [:]
+  stages {
+    
+    stage("Remote SSH"){
+    def remote = [:]
     remote.name = 'docker1'
     remote.host = 'docker1.do1.lab'
     remote.user = 'jenkins'
     remote.password = 'admin'
     remote.allowAnyHosts = true
-  stages {
+    
+    }
     stage("verify tooling") {
       steps {
         sh '''
