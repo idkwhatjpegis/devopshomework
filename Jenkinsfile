@@ -14,10 +14,10 @@ pipeline {
     }
 }
     
-    stage('Docker Compose test') {
+    stage('Docker Compose Config') {
       steps {
         sh '''
-        sh 'docker compose config'
+        sh 'docker compose config '
         '''
       }
     }
