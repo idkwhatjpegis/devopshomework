@@ -2,7 +2,6 @@ pipeline {
   agent any
   stage('SSH into the server') {
     steps {
-        script {
             def remote = [:]
             remote.name = 'docker1'
             remote.host = 'docker1.do1.lab'
@@ -10,7 +9,6 @@ pipeline {
             remote.password = 'admin'
             remote.allowAnyHosts = true
            
-        }
     }
 }
     stage("verify tooling") {
