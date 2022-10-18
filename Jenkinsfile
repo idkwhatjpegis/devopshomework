@@ -24,18 +24,23 @@ pipeline {
     }
     stage('Docker Compose test') {
       steps {
+        sh '''
         sh 'docker compose config'
+        '''
       }
     }
     stage('Docker Compose Build') {
       steps {
+        sh '''
         sh 'docker compose build'
-        
+        '''
       }
     }
     stage('Docker Compose Up') {
       steps {
+        sh '''
         sh 'docker compose up -d'
+        '''
       }
     }
   }
